@@ -1,6 +1,18 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    justify-content: space-around;
     gap: 5em;
-    text-align: center;
+}
+
+img {
+    padding: 2%;
+    width: 15%;
+
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+div {
+    text-align:center;
 }
