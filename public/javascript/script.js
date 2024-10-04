@@ -8,22 +8,37 @@ fetch("http://localhost:3000/")
         outputData(data)
     });
 
-// Crate images
+// Create image Layout
 function outputData(data){
     for(var i = 0; i < data.length; i++){
         console.log(data[i].name);
         
+        // Get each Hero that is currently in game
         if(data[i].player_selectable == true && data[i].in_development == false && data[i].disabled == false){
+            // Create each section of hero
+            // Create div
             const divNode = document.createElement("div");
             divNode.id = "divHero" + i;
             divNode.className = "divHero";
 
             document.getElementById("heroes").appendChild(divNode);
 
+            // Get and add img
             const imgNode = document.createElement("img");
             imgNode.src = data[i].images.card;
     
-            document.getElementById("divHero" + i).appendChild(imgNode);  
+            document.getElementById("divHero" + i).appendChild(imgNode);
+
+            // Get and add Name
+            const p = document.createElement("p");
+            const nameNode = document.createTextNode(data[i].name);
+
+            p.appendChild(nameNode);
+
+            // Colour of hero
+            p.style.backgroundColor = "rgb(" + data[i].color_ui[0] + ", " + data[i].color_ui[1] + ", " + data[i].color_ui[2] + ")";
+
+            divNode.appendChild(p);
         }      
     }
 }

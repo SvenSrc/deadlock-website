@@ -1,3 +1,5 @@
+/* index Site - used for the layout */
+
 .flex-container {
     display: flex;
 }
@@ -6,15 +8,9 @@ img {
     width: 15%;
     min-width: 200px;
 
-    margin: 3em;
-
     border-color: black;
     border-style: solid;
     border-radius: 10px;
-}
-
-div {
-    
 }
 
 .divHeroes {
@@ -23,4 +19,13 @@ div {
     justify-content: space-evenly;
 
     text-align: center;
+    
+}
+
+.divHero{
+    margin: 3em;
+}
+
+p {
+    
 }
