@@ -14,15 +14,17 @@ function outputData(data){
         console.log(data[i].name);
         
         if(data[i].player_selectable == true && data[i].in_development == false && data[i].disabled == false){
-            const node = document.createElement("img");
-            node.src = data[i].images.card;
+            const divNode = document.createElement("div");
+            divNode.id = "divHero" + i;
+            divNode.className = "divHero";
+
+            document.getElementById("heroes").appendChild(divNode);
+
+            const imgNode = document.createElement("img");
+            imgNode.src = data[i].images.card;
     
-            document.getElementById("heroes").appendChild(node)  
+            document.getElementById("divHero" + i).appendChild(imgNode);  
         }      
     }
 }
-
-/*     data.forEach(hero =>
-        document.getElementById("heroList").innerHTML); */
-
   
