@@ -3,6 +3,7 @@ var data = JSON.parse(localStorage.getItem("Heroes"));
 
 var dataClickedHero;
 
+// Data from clicked Hero is separated from the rest
 for(var i = 0; i < data.length; i++){
     if(data[i].name == clickedHero){
         console.log(i);
@@ -22,4 +23,19 @@ favicon.setAttribute("href", dataClickedHero.images.minimap);
 document.head.appendChild(favicon);
 
 // Change Text fitting to hero
-document.getElementById("hero").textContent = clickedHero;
+document.getElementById("hero").innerHTML = clickedHero;
+
+document.getElementById("maxMoveSpeed").innerHTML = dataClickedHero.starting_stats.max_move_speed;
+document.getElementById("crouchSpeed").innerHTML = dataClickedHero.starting_stats.crouch_speed;
+document.getElementById("moveAcceleration").innerHTML = dataClickedHero.starting_stats.move_acceleration;
+document.getElementById("lightMelee").innerHTML = dataClickedHero.starting_stats.light_melee_damage;
+document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats.heavy_melee_damage;
+document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health;
+document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina;
+
+// Change Image
+const imgNode = document.createElement("img");
+imgNode.src = dataClickedHero.images.card;
+imgNode.alt = clickedHero;
+
+document.getElementById("heroImage").appendChild(imgNode);

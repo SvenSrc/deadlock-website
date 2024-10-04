@@ -1,0 +1,11 @@
+img {
+    width: 15%;
+    min-width: 200px;
+
+}
+
+
+table{
+    text-align: center;
+    display: inline-block
+}
