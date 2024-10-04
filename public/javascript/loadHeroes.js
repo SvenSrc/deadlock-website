@@ -1,24 +1,28 @@
+
 const url = "localhost:3000";
 
 fetch("http://localhost:3000/")
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        console.log(data);
 
-        outputData(data)
+        outputData(data);
+
+        // Set the json to the Local Storage
+        localStorage.setItem("Heroes", JSON.stringify(data));
     });
 
 // Create image Layout
 function outputData(data){
     for(var i = 0; i < data.length; i++){
-        console.log(data[i].name);
+        // console.log(data[i].name);
         
         // Get each Hero that is currently in game
         if(data[i].player_selectable == true && data[i].in_development == false && data[i].disabled == false){
             // Create each section of hero
             // Create div
             const divNode = document.createElement("div");
-            divNode.id = "divHero" + i;
+            divNode.id = data[i].name;
             divNode.className = "divHero";
 
             document.getElementById("heroes").appendChild(divNode);
@@ -26,8 +30,9 @@ function outputData(data){
             // Get and add img
             const imgNode = document.createElement("img");
             imgNode.src = data[i].images.card;
+            imgNode.setAttribute("onclick", "loadHeroPage(this.parentNode.id)")
     
-            document.getElementById("divHero" + i).appendChild(imgNode);
+            document.getElementById(data[i].name).appendChild(imgNode);
 
             // Get and add Name
             const p = document.createElement("p");
@@ -42,4 +47,5 @@ function outputData(data){
         }      
     }
 }
+
   
