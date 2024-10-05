@@ -1,11 +1,89 @@
-img {
-    width: 15%;
-    min-width: 200px;
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(10vh - 3px);
+
+    background-color: white;
+
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: goldenrod;
+}
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    min-height: 90vh;
 
 }
 
 
+.side {
+    flex: 0.5;
+
+    background-color: #1a5368;
+}
+
+.middle {
+   -webkit-flex: 2;
+   -ms-flex: 2;
+   flex: 2;
+
+   background-color: #2b4150;
+   
+   border-left-color: white;
+   border-right-color: white;
+   border-width: 3px;
+   border-left-style: solid;
+   border-right-style: solid;
+}
+
+img {
+    width: 15%;
+    min-width: 200px;
+
+    margin: 3em;
+    margin-left: 6em;
+
+    background-color:#ecdcbc;
+
+    border-width: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: gainsboro;
+}
+
+
 table{
+    width: 100%;
+    table-layout: fixed;
+
     text-align: center;
-    display: inline-block
+}
+
+th {
+    text-align: left;
+}
+
+th, td {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+/* Abilities */
+
+.abilities {
+    text-align: center;
+
+    display: grid;
+    gap: 1em;
+
+    grid-template-columns: auto auto auto auto;
 }

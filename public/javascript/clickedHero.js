@@ -39,3 +39,6 @@ imgNode.src = dataClickedHero.images.card;
 imgNode.alt = clickedHero;
 
 document.getElementById("heroImage").appendChild(imgNode);
+
+// Change Header
+document.getElementById("header").style["background-color"] = "rgb(" + dataClickedHero.color_ui[0] + ", " + dataClickedHero.color_ui[1] + ", " + dataClickedHero.color_ui[2] + ")";
