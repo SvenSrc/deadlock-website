@@ -1,3 +1,6 @@
+
+
+
 var clickedHero = localStorage.getItem("clickedHero");
 var data = JSON.parse(localStorage.getItem("Heroes"));
 
@@ -42,3 +45,6 @@ document.getElementById("heroImage").appendChild(imgNode);
 
 // Change Header
 document.getElementById("header").style["background-color"] = "rgb(" + dataClickedHero.color_ui[0] + ", " + dataClickedHero.color_ui[1] + ", " + dataClickedHero.color_ui[2] + ")";
+
+// Get All Abilities
+// localStorage.setItem("abilities", JSON.stringify("https://assets.deadlock-api.com/v1/items/by-type/ability?language=english"));

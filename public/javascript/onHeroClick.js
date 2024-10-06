@@ -1,3 +1,4 @@
+window.loadHeroPage = loadHeroPage;
 
 function loadHeroPage(parentNodeID){
     console.log(parentNodeID);
