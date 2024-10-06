@@ -8,9 +8,22 @@ img {
     width: 15%;
     min-width: 200px;
 
-    border-color: black;
-    border-style: solid;
-    border-radius: 10px;
+
+
+    background-color:#ecdcbc;
+}
+
+p{
+    text-align: center;
+
+    display: block;
+
+    margin-top: 0;
+    margin-left: 3em;
+    margin-right: 3em;
+
+    width: 15%;
+    min-width: 200px;
 }
 
 .divHeroes {
@@ -26,6 +39,6 @@ img {
     margin: 3em;
 }
 
-p {
-    
+body {
+    background-color: #1a5368;
 }
