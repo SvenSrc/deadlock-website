@@ -1,5 +1,10 @@
 /* index Site - used for the layout */
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 .flex-container {
     display: flex;
 }
@@ -41,4 +46,50 @@ p{
 
 body {
     background-color: #1a5368;
+}
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    min-height: 90vh;
+
+}
+
+.side {
+    flex: 0.5;
+
+    background-color: #1a5368;
+}
+
+.middle {
+   -webkit-flex: 2;
+   -ms-flex: 2;
+   flex: 2;
+
+   background-color: #2b4150;
+   
+   border-left-color: white;
+   border-right-color: white;
+   border-width: 3px;
+   border-left-style: solid;
+   border-right-style: solid;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(10vh - 3px);
+
+    background-color: #ecdcbc;
+
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: goldenrod;
+}
+
+h1{
+    margin-left: 5em;
 }
