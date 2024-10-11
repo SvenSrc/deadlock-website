@@ -8,9 +8,18 @@ var cors = require("cors");
 app.use(cors());
 
 app.get("/", async (req, res) => {
-    var response = await fetch("https://assets.deadlock-api.com/v1/heroes?language=english")
-    res.json(await response.json())
-})
+    const urls = [
+        "https://assets.deadlock-api.com/v1/heroes?language=english",
+        "https://assets.deadlock-api.com/v1/items?language=english"
+    ];
+
+    const responses = await Promise.all(urls.map(url => fetch(url)));
+
+    const data = await Promise.all(responses.map(response => response.json()));
+
+    res.json(data);
+
+}) 
 
 app.listen(3000, () => {
     console.log("Started and listenting to port 3000");

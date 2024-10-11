@@ -6,10 +6,11 @@ fetch("http://localhost:3000/")
     .then(data => {
         console.log(data);
 
-        outputData(data);
+        outputData(data[0]);
 
         // Set the json to the Local Storage
-        localStorage.setItem("Heroes", JSON.stringify(data));
+        localStorage.setItem("Heroes", JSON.stringify(data[0]));
+        localStorage.setItem("Items / Abilities", JSON.stringify(data[1]));
     });
 
 // Create image Layout
