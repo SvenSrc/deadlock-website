@@ -37,10 +37,11 @@ document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats
 document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health;
 document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina;
 
-// Change Image
+// Add/Change Image
 const imgNode = document.createElement("img");
 imgNode.src = dataClickedHero.images.card;
 imgNode.alt = clickedHero;
+imgNode.classList.add("imgHero");
 
 document.getElementById("heroImage").appendChild(imgNode);
 

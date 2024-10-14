@@ -22,12 +22,14 @@ export function loadAbilities(){
             if(dataAbility[i].id == values){
                 document.getElementById(`ability${slot}`).innerHTML = dataAbility[i].name;
 
-                console.log(dataAbility[i].name);
-                console.log(values)
+                const imgNode = document.createElement("img");
+                imgNode.src = dataAbility[i].image;
+                imgNode.alt = dataAbility[i].name;
+                imgNode.classList.add("imgAbility");
+
+                document.getElementById(`ability${slot}`).appendChild(imgNode); 
 
                 slot++;
-
-                console.log(slot);
                 break;
             }
         }
