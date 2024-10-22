@@ -16,7 +16,47 @@
         <div class="side">Left</div>
     
         <div class="column middle">
-            <div id="heroImage" alt="Hero Image"></div>
+            <div id="heroImage" alt="Hero Image">
+                <video id="videoAbility" type="video/webm" src=""></video>
+            </div>
+
+            <h2>Abilties</h2>
+            <div class="abilities">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="ability1" class="ability"></div>
+                            </td>
+                            <td>
+                                <div id="ability2" class="ability"></div>
+                            </td>
+                            <td>
+                                <div id="ability3" class="ability"></div>
+                            </td>
+                            <td>
+                                <div id="ability4" class="ability"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="ability1name">Ability 1</div>
+                            </td>
+                            <td>
+                                <div id="ability2name">Ability 2</div>
+                            </td>
+                            <td>
+                                <div id="ability3name">Ability 3</div>
+                            </td>
+                            <td>
+                                <div id="ability4name">Ability 4</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h2>Starting Stats</h2>
             <div id="stats">
@@ -76,20 +116,12 @@
                 </table>
             </div>
 
-            <h2>Abilties</h2>
-            <div class="abilities">
-                <div id="ability1" class="ability">
-                    Ability 1
-                </div>
-                <div id="ability2" class="ability">Ability 2</div>
-                <div id="ability3" class="ability">Ability 3</div>
-                <div id="ability4" class="ability">Ability 4</div>
-            </div>
         </div>
         <div class="side">Right</div>
     </div>
 
     <script type="module" src="/javascript/clickedHero.js"></script>
+    <script type="module" src="/javascript/eventListener.js"></script>
     <script src="/javascript/checkStorage.js"></script>
 </body>
 </html>
