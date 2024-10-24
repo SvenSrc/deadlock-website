@@ -37,6 +37,8 @@ document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats
 document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health;
 document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina;
 
+
+
 // Add/Change Image
 const imgNode = document.createElement("img");
 imgNode.src = dataClickedHero.images.card;
@@ -45,7 +47,12 @@ imgNode.classList.add("imgHero");
 
 document.getElementById("heroImage").appendChild(imgNode);
 
-// Change Header
+// Add Text
+document.getElementById("herodesc").innerHTML = dataClickedHero.lore
+document.getElementById("herorole").innerHTML = dataClickedHero.role
+document.getElementById("heroplay").innerHTML = dataClickedHero.playstyle
+
+// Change Header and Background colour
 document.getElementById("header").style["background-color"] = "rgb(" + dataClickedHero.color_ui[0] + ", " + dataClickedHero.color_ui[1] + ", " + dataClickedHero.color_ui[2] + ")";
 
 // Get All Abilities

@@ -1,19 +1,22 @@
 body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header {
     display: flex;
     flex-direction: row;
+
     min-height: calc(10vh - 3px);
+    min-width: 100%;
+
 
     background-color: white;
 
     border-bottom-style: solid;
     border-bottom-width: 3px;
     border-bottom-color: goldenrod;
-
 }
 
 .container {
@@ -45,21 +48,6 @@ body, html {
    border-right-style: solid;
 }
 
-.imgHero {
-    width: 15%;
-    min-width: 200px;
-
-    margin: 3em;
-    margin-left: 6em;
-
-    background-color:#ecdcbc;
-
-
-    border-width: 7px;
-    border-style: solid;
-    border-color:ghostwhite;
-}
-
 table{
     width: 100%;
     table-layout: fixed;
@@ -77,17 +65,47 @@ th, td {
     border-style: solid;
 }
 
+p {
+    color: aliceblue;
+}
+
+/* Hero Info */
+
+.imgHero {
+    width: 15%;
+    min-width: 200px;
+
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 6em;
+    margin-right: 6em;
+
+    background-color:#ecdcbc;
+
+    border-width: 7px;
+    border-style: solid;
+    border-color:ghostwhite;
+
+    flex: 0.5;
+}
+
+.heroinfo {
+    display: flex;   
+}
+
+.herotext {
+    flex: 1.5;
+}
+
+
+
 /* Abilities */
-
-
 
 .abilities {
     display: flex;
     align-items: center;
 
     gap: 1em;
-
-
 }
 
 .imgAbility {
