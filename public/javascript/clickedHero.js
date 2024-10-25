@@ -23,7 +23,7 @@ document.title = clickedHero + " Stats";
 let header = document.querySelector("head");
 let favicon = document.createElement("link");
 favicon.setAttribute("rel", "icon");
-favicon.setAttribute("href", dataClickedHero.images.minimap);
+favicon.setAttribute("href", dataClickedHero.images.minimap_image);
 document.head.appendChild(favicon);
 
 // Add Stats

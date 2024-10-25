@@ -31,113 +31,43 @@
 
             <div id="videocontent" class="videocontent">
                 <div id="overlay" class="overlay"></div>
-                <iframe class="videoAbility" id="videoAbility" type="video/webm" src="" frameborder="0"></iframe>
+                <iframe mute class="videoAbility" id="videoAbility" type="video/webm" src="" frameborder="0"></iframe>
             </div>
 
             <h2>Abilties</h2>
             <div class="abilities">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div id="ability1" class="ability"></div>
-                            </td>
-                            <td>
-                                <div id="ability2" class="ability"></div>
-                            </td>
-                            <td>
-                                <div id="ability3" class="ability"></div>
-                            </td>
-                            <td>
-                                <div id="ability4" class="ability"></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div id="ability1name">Ability 1</div>
-                            </td>
-                            <td>
-                                <div id="ability2name">Ability 2</div>
-                            </td>
-                            <td>
-                                <div id="ability3name">Ability 3</div>
-                            </td>
-                            <td>
-                                <div id="ability4name">Ability 4</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div id="ability1" class="ability1img"></div>
+                <div id="ability2" class="ability2img"></div>
+                <div id="ability3" class="ability3img"></div>
+                <div id="ability4" class="ability4img"></div>
+
+                <div id="ability1name" class="ability1name">Ability 1</div>
+                <div id="ability2name" class="ability2name">Ability 2</div>
+                <div id="ability3name" class="ability3name">Ability 3</div>
+                <div id="ability4name" class="ability4name">Ability 4</div>
             </div>
 
             <h2>Starting Stats</h2>
-            <div id="stats">
-                <table>
-                    <tr>
-                        <th>
-                            HP
-                        </th>
-                        <th>
-                            Dmg
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            Max Health
-                            <p id="maxHealth">Max Health</p>
-                        </td>
-                        <td>
-                            Light Melee
-                            <p id="lightMelee">Light Melee Damage</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Movement</th>
-                        <td>
-                            Heavy Melee
-                            <p id="heavyMelee">Heavy Melee Damage</p>
-                        </td>
-                        <!-- <td>
-                            Crouch Speed
-                            <p id="crouchSpeed">Crouch Speed</p>
-                        </td> -->
-                    </tr>
-                    <tr>
-                        <td>
-                            Max Move Speed
-                            <p id="maxMoveSpeed">Max Move Speed</p>
-                        </td>
-                        <td></td>
-                        <!-- <td>
-                            Move Acceleration
-                            <p id="moveAcceleration">Move Acceleration</p>
-                        </td> -->
-                    </tr>
-                    <tr>
-                        <td>
-                            Stamina
-                            <p id="stamina">Stamina</p>
-                        </td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-
             <div class="stats">
                 <div class="hp">
                     <h3>HP</h3>
-                    HP
-                </div>
-                <div class="Movement">
-                    <h3>Movement</h3>
-                    Movement
+                    <p id="maxHealth">Max Health</p>
                 </div>
                 <div class="damage">
                     <h3>Damage</h3>
-                    Damage
+                    Light Melee
+                    <p id="lightMelee">Light Melee Damage</p>
+                    Heavy Melee
+                    <p id="heavyMelee">Heavy Melee Damage</p>
                 </div>
+                <div class="Movement">
+                    <h3>Movement</h3>
+                    Max Move Speed
+                    <p id="maxMoveSpeed">Max Move Speed</p>
+                    Stamina
+                    <p id="stamina">Stamina</p>
+                </div>
+                <div></div>
             </div>
 
         </div>

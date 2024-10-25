@@ -135,12 +135,17 @@ p {
 
 /* Abilities */
 
-.abilities {
-    display: flex;
-    align-items: center;
 
-    gap: 1em;
+.abilities {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    text-align: center;
+
+    justify-content: space-evenly;
 }
+
+
 
 .imgAbility {
     width: 100px;
@@ -149,6 +154,9 @@ p {
     background-color:rgb(31, 31, 31);
     border-radius: 50%;
     padding: 10px;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* Stats */
@@ -162,6 +170,7 @@ p {
 
 .stats > div {
     flex: 50%;
+    text-align: center;
 }
 
 @media screen and (max-width: 1400px){
@@ -185,7 +194,40 @@ p {
 }
 
 @media screen and (max-width: 850px){
-    .imgAbility{
-        width: 3em;
+    .abilities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(4, auto);
     }
+
+    .ability1img {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      
+    .ability2img {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      
+    .ability1name {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      
+    .ability2name {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+      
+    .ability3img {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      
+    .ability4img {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+      
+    .ability3name {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+      
+    .ability4name {
+        grid-area: 4 / 2 / 5 / 3;
+      }
 }
