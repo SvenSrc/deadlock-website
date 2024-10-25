@@ -26,17 +26,16 @@ favicon.setAttribute("rel", "icon");
 favicon.setAttribute("href", dataClickedHero.images.minimap);
 document.head.appendChild(favicon);
 
-// Change Text fitting to hero
+// Add Stats
 document.getElementById("hero").innerHTML = clickedHero;
 
 document.getElementById("maxMoveSpeed").innerHTML = dataClickedHero.starting_stats.max_move_speed;
-document.getElementById("crouchSpeed").innerHTML = dataClickedHero.starting_stats.crouch_speed;
-document.getElementById("moveAcceleration").innerHTML = dataClickedHero.starting_stats.move_acceleration;
+// document.getElementById("crouchSpeed").innerHTML = dataClickedHero.starting_stats.crouch_speed;
+// document.getElementById("moveAcceleration").innerHTML = dataClickedHero.starting_stats.move_acceleration;
 document.getElementById("lightMelee").innerHTML = dataClickedHero.starting_stats.light_melee_damage;
 document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats.heavy_melee_damage;
 document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health;
 document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina;
-
 
 
 // Add/Change Image

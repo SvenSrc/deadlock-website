@@ -95,6 +95,9 @@ p {
 
 .herotext {
     flex: 1.5;
+    padding-right: 20px;
+
+    text-align: justify;
 }
 
 /* Video */
@@ -148,10 +151,37 @@ p {
     padding: 10px;
 }
 
+/* Stats */
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.stats > div {
+    flex: 50%;
+}
+
 @media screen and (max-width: 1400px){
     .imgAbility{
         width: 5em;
     }
+
+    .heroinfo {
+        flex-direction: column;
+    }
+
+    #heroImage {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .herotext {
+        padding-left: 20px;
+    }
+
 }
 
 @media screen and (max-width: 850px){

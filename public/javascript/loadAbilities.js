@@ -1,6 +1,5 @@
 const videoMap = new Map();
 
-
 export function loadAbilities(){
 
     const findAbilityData = JSON.parse(localStorage.getItem("dataClickedHero"));
