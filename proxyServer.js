@@ -9,8 +9,8 @@ app.use(cors());
 
 app.get("/", async (req, res) => {
     const urls = [
-        "https://assets.deadlock-api.com/v1/heroes?language=english",
-        "https://assets.deadlock-api.com/v1/items?language=english"
+        "https://assets.deadlock-api.com/v2/heroes?language=english",
+        "https://assets.deadlock-api.com/v2/items?language=english"
     ];
 
     const responses = await Promise.all(urls.map(url => fetch(url)));

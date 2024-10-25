@@ -30,7 +30,7 @@ function outputData(data){
 
             // Get and add img
             const imgNode = document.createElement("img");
-            imgNode.src = data[i].images.card;
+            imgNode.src = data[i].images.icon_hero_card;
             imgNode.setAttribute("onclick", "loadHeroPage(this.parentNode.id)")
     
             document.getElementById(data[i].name).appendChild(imgNode);
@@ -42,7 +42,7 @@ function outputData(data){
             p.appendChild(nameNode);
 
             // Colour of hero
-            p.style.backgroundColor = "rgb(" + data[i].color_ui[0] + ", " + data[i].color_ui[1] + ", " + data[i].color_ui[2] + ")";
+            p.style.backgroundColor = "rgb(" + data[i].colors.ui[0] + ", " + data[i].colors.ui[1] + ", " + data[i].colors.ui[2] + ")";
 
             divNode.appendChild(p);
         }      

@@ -19,16 +19,18 @@ export function loadAbilities(){
 
     abilityID.forEach((values, keys) => {
         for(var i = 0; i < dataAbility.length; i++){
-            if(dataAbility[i].id == values){
+            if(dataAbility[i].class_name == values){
                 document.getElementById(`ability${slot}name`).innerHTML = dataAbility[i].name;
 
-                videoMap.set(`ability${slot}video`, dataAbility[i].video);
+                videoMap.set(`ability${slot}video`, dataAbility[i].videos.webm);
 
                 const imgNode = document.createElement("img");
                 imgNode.src = dataAbility[i].image;
                 imgNode.alt = dataAbility[i].name;
                 imgNode.id = `ability${slot}img`;
                 imgNode.classList.add("imgAbility");
+
+                console.log(dataAbility[i].name);
 
                 document.getElementById(`ability${slot}`).appendChild(imgNode); 
 

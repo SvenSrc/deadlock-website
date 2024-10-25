@@ -29,30 +29,30 @@ document.head.appendChild(favicon);
 // Add Stats
 document.getElementById("hero").innerHTML = clickedHero;
 
-document.getElementById("maxMoveSpeed").innerHTML = dataClickedHero.starting_stats.max_move_speed;
+document.getElementById("maxMoveSpeed").innerHTML = dataClickedHero.starting_stats.max_move_speed.value;
 // document.getElementById("crouchSpeed").innerHTML = dataClickedHero.starting_stats.crouch_speed;
 // document.getElementById("moveAcceleration").innerHTML = dataClickedHero.starting_stats.move_acceleration;
-document.getElementById("lightMelee").innerHTML = dataClickedHero.starting_stats.light_melee_damage;
-document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats.heavy_melee_damage;
-document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health;
-document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina;
+document.getElementById("lightMelee").innerHTML = dataClickedHero.starting_stats.light_melee_damage.value;
+document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats.heavy_melee_damage.value;
+document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health.value;
+document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina.value;
 
 
 // Add/Change Image
 const imgNode = document.createElement("img");
-imgNode.src = dataClickedHero.images.card;
+imgNode.src = dataClickedHero.images.icon_hero_card;
 imgNode.alt = clickedHero;
 imgNode.classList.add("imgHero");
 
 document.getElementById("heroImage").appendChild(imgNode);
 
 // Add Text
-document.getElementById("herodesc").innerHTML = dataClickedHero.lore
-document.getElementById("herorole").innerHTML = dataClickedHero.role
-document.getElementById("heroplay").innerHTML = dataClickedHero.playstyle
+document.getElementById("herodesc").innerHTML = dataClickedHero.description.lore
+document.getElementById("herorole").innerHTML = dataClickedHero.description.role
+document.getElementById("heroplay").innerHTML = dataClickedHero.description.playstyle
 
 // Change Header and Background colour
-document.getElementById("header").style["background-color"] = "rgb(" + dataClickedHero.color_ui[0] + ", " + dataClickedHero.color_ui[1] + ", " + dataClickedHero.color_ui[2] + ")";
+document.getElementById("header").style["background-color"] = "rgb(" + dataClickedHero.colors.ui[0] + ", " + dataClickedHero.colors.ui[1] + ", " + dataClickedHero.colors.ui[2] + ")";
 
 // Get All Abilities
 loadAbilities();
