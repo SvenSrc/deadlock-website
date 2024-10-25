@@ -40,6 +40,10 @@ export function loadAbilities(){
     })
     console.log(videoMap);
 
+    document.getElementById("overlay").addEventListener("click", () => {
+        closeVideo();
+    })
+
     document.getElementById("ability1img").addEventListener("click", () => {
         loadVideo(1);
     });
@@ -55,11 +59,17 @@ export function loadAbilities(){
 }
 
 let int;
-let video = document.getElementById("videoAbility");
+let videoAbility = document.getElementById("videoAbility");
 function loadVideo(int){
-    video.pause();
-    video.setAttribute("src", videoMap.get(`ability${int}video`));
+    overlay.style.display = "block";
+    videoAbility.style.display = "block";
 
-    video.load();
-    video.play();
+    videoAbility.setAttribute("src", videoMap.get(`ability${int}video`));
+}
+
+function closeVideo(){
+    overlay.style.display = "none";
+    videoAbility.style.display = "none";
+
+    videoAbility.setAttribute("src", "");
 }
