@@ -13,7 +13,7 @@
     <div class="container">
 
 
-        <div class="side">Left</div>
+        <div class="side"></div>
     
         <div class="column middle">
 
@@ -34,6 +34,8 @@
                 <iframe mute class="videoAbility" id="videoAbility" type="video/webm" src="" frameborder="0"></iframe>
             </div>
 
+            <hr>
+
             <h2>Abilties</h2>
             <div class="abilities">
                 <div id="ability1" class="ability1img"></div>
@@ -47,31 +49,48 @@
                 <div id="ability4name" class="ability4name">Ability 4</div>
             </div>
 
+            <hr>
+
             <h2>Starting Stats</h2>
             <div class="stats">
                 <div class="hp">
-                    <h3>HP</h3>
-                    <p id="maxHealth">Max Health</p>
+                    <div> 
+                        <h3>HP</h3>
+                        <p id="maxHealth">Max Health</p>
+                    </div>
+
+                    <div>
+                        <h3>Movement</h3>
+                        Max Move Speed
+                        <p id="maxMoveSpeed">Max Move Speed</p>
+                        Stamina
+                        <p id="stamina">Stamina</p>
+                    </div>
                 </div>
+
                 <div class="damage">
-                    <h3>Damage</h3>
-                    Light Melee
-                    <p id="lightMelee">Light Melee Damage</p>
-                    Heavy Melee
-                    <p id="heavyMelee">Heavy Melee Damage</p>
-                </div>
-                <div class="Movement">
-                    <h3>Movement</h3>
-                    Max Move Speed
-                    <p id="maxMoveSpeed">Max Move Speed</p>
-                    Stamina
-                    <p id="stamina">Stamina</p>
-                </div>
-                <div></div>
+                    <div>
+                        <h3>Weapon</h3>
+                        Bullet Damage
+                        <p id="bulletdamage">Bullet Damage</p>
+                        Clip Size
+                        <p id="clipsize">Clip Size</p>
+                        Shooting Speed
+                        <p id="cycletime">Shooting Speed</p>
+                    </div>
+
+                    <div>  
+                        <h3>Melee</h3>
+                        Light Melee
+                        <p id="lightMelee">Light Melee Damage</p>
+                        Heavy Melee
+                        <p id="heavyMelee">Heavy Melee Damage</p>
+                        </div>
+                    </div>
             </div>
 
         </div>
-        <div class="side">Right</div>
+        <div class="side"></div>
     </div>
 
     <script type="module" src="/javascript/clickedHero.js"></script>

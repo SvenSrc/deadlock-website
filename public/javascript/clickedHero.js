@@ -37,6 +37,7 @@ document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats
 document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health.value;
 document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina.value;
 
+// Weapon stats are loaded in loadAbilites.js because of needed source/API
 
 // Add/Change Image
 const imgNode = document.createElement("img");

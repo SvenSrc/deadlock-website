@@ -69,6 +69,23 @@ p {
     color: aliceblue;
 }
 
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+hr {
+    width: 95%;
+    margin-top: 2vh;
+    color: aliceblue;
+    background-color: aliceblue;
+
+    height: 1px;
+}
+
 /* Hero Info */
 
 .imgHero {
@@ -173,6 +190,16 @@ p {
     text-align: center;
 }
 
+.hp > div {
+    margin: 25px;
+    
+}
+
+.damage > div {
+
+    margin: 25px;
+}  
+
 @media screen and (max-width: 1400px){
     .imgAbility{
         width: 5em;
@@ -230,4 +257,8 @@ p {
     .ability4name {
         grid-area: 4 / 2 / 5 / 3;
       }
+
+    .stats {
+        flex-direction: column;
+    }
 }

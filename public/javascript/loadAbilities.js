@@ -10,6 +10,7 @@ export function loadAbilities(){
     abilityID.set("Ability 2", findAbilityData.items.signature2);
     abilityID.set("Ability 3", findAbilityData.items.signature3);
     abilityID.set("Ability 4", findAbilityData.items.signature4);
+    abilityID.set("Weapon Stat", findAbilityData.items.weapon_primary);
 
     console.log(abilityID);
 
@@ -19,7 +20,7 @@ export function loadAbilities(){
 
     abilityID.forEach((values, keys) => {
         for(var i = 0; i < dataAbility.length; i++){
-            if(dataAbility[i].class_name == values){
+            if(dataAbility[i].class_name == values && dataAbility[i].type == "ability"){
                 document.getElementById(`ability${slot}name`).innerHTML = dataAbility[i].name;
 
                 videoMap.set(`ability${slot}video`, dataAbility[i].videos.webm);
@@ -36,6 +37,12 @@ export function loadAbilities(){
 
                 slot++;
                 break;
+            }else if (dataAbility[i].class_name == values && dataAbility[i].type == "weapon"){
+                console.log("Weapon Stats")
+                document.getElementById("bulletdamage").innerHTML = dataAbility[i].weapon_info.bullet_damage;
+                document.getElementById("clipsize").innerHTML = dataAbility[i].weapon_info.clip_size;
+                document.getElementById("cycletime").innerHTML = dataAbility[i].weapon_info.cycle_time;
+
             }
         }
     })
