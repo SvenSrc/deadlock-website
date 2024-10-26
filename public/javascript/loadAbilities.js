@@ -21,7 +21,7 @@ export function loadAbilities(){
     abilityID.forEach((values, keys) => {
         for(var i = 0; i < dataAbility.length; i++){
             if(dataAbility[i].class_name == values && dataAbility[i].type == "ability"){
-                document.getElementById(`ability${slot}name`).innerHTML = dataAbility[i].name;
+                document.getElementById(`ability${slot}name`).innerHTML = "<p>" + dataAbility[i].name + "</p>";
 
                 videoMap.set(`ability${slot}video`, dataAbility[i].videos.webm);
 
@@ -42,7 +42,7 @@ export function loadAbilities(){
                 document.getElementById("bulletdamage").innerHTML = dataAbility[i].weapon_info.bullet_damage;
                 document.getElementById("clipsize").innerHTML = dataAbility[i].weapon_info.clip_size;
                 document.getElementById("cycletime").innerHTML = dataAbility[i].weapon_info.cycle_time;
-
+                break;
             }
         }
     })

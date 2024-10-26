@@ -1,7 +1,58 @@
+
 body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+th {
+    text-align: left;
+}
+
+th, td {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+p {
+    font-family: Verdana;
+    font-size:medium;
+    line-height: 1.5;
+
+    color: aliceblue;
+}
+
+h1 {
+    font-family: Georgia;
+    margin-left: 5em;
+}
+
+h2 {
+    font-family: Georgia;
+
+    color: ghostwhite;
+    text-align: center;
+}
+
+h3 {
+    font-family: Georgia;
+    color:white;
+    text-decoration: underline;
+}
+
+h4 {
+    font-family: Georgia;
+    color: ghostwhite;
+}
+
+hr {
+    width: 95%;
+    margin-top: 2vh;
+    color: aliceblue;
+    background-color: aliceblue;
+
+    height: 1px;
 }
 
 .header {
@@ -48,43 +99,6 @@ body, html {
    border-right-style: solid;
 }
 
-table{
-    width: 100%;
-    table-layout: fixed;
-
-    text-align: center;
-}
-
-th {
-    text-align: left;
-}
-
-th, td {
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-}
-
-p {
-    color: aliceblue;
-}
-
-h2 {
-    text-align: center;
-}
-
-h3 {
-    text-decoration: underline;
-}
-
-hr {
-    width: 95%;
-    margin-top: 2vh;
-    color: aliceblue;
-    background-color: aliceblue;
-
-    height: 1px;
-}
 
 /* Hero Info */
 
@@ -176,7 +190,14 @@ hr {
     margin-top: 10px;
 }
 
+.imgAbility:hover {
+    background-color:rgb(102, 102, 102);
+
+    cursor:pointer;
+}
+
 /* Stats */
+
 .stats {
     display: flex;
     flex-direction: row;
@@ -187,18 +208,34 @@ hr {
 
 .stats > div {
     flex: 50%;
-    text-align: center;
 }
 
-.hp > div {
+
+.hp > * {
     margin: 25px;
     
 }
+.hp > div {
+    text-align: center;
+    
+}
 
-.damage > div {
+.damage > * {
 
     margin: 25px;
-}  
+}
+
+.damage > div {
+    text-align: center;
+}
+
+.stamina {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+}
 
 @media screen and (max-width: 1400px){
     .imgAbility{

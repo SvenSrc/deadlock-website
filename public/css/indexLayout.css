@@ -25,6 +25,12 @@ img {
 
 }
 
+img:hover {
+    cursor: pointer;
+    filter: grayscale(25%);
+    background-color:#d8c29a;
+}
+
 p{
     align-items: center;
     justify-content: center;
@@ -46,6 +52,9 @@ p{
     border-bottom: solid 7px;
 
     border-color: ghostwhite;
+
+    font-family: Verdana;
+    font-size:medium;
 }
 
 .divHeroes {
@@ -109,4 +118,5 @@ body {
 
 h1{
     margin-left: 5em;
+    font-family: Georgia;
 }

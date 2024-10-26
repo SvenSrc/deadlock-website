@@ -35,7 +35,18 @@ document.getElementById("maxMoveSpeed").innerHTML = dataClickedHero.starting_sta
 document.getElementById("lightMelee").innerHTML = dataClickedHero.starting_stats.light_melee_damage.value;
 document.getElementById("heavyMelee").innerHTML = dataClickedHero.starting_stats.heavy_melee_damage.value;
 document.getElementById("maxHealth").innerHTML = dataClickedHero.starting_stats.max_health.value;
-document.getElementById("stamina").innerHTML = dataClickedHero.starting_stats.stamina.value;
+
+let stamina = dataClickedHero.starting_stats.stamina.value;
+
+for(let i = 0; i < stamina; i++){
+    const square = document.createElement("div");
+    square.style.margin = "10px";
+    square.style.backgroundColor = "white";
+    square.style.width = "90px";
+    square.style.height = "20px";
+
+    document.getElementById("stamina").appendChild(square);
+}
 
 // Weapon stats are loaded in loadAbilites.js because of needed source/API
 
