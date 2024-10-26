@@ -13,7 +13,8 @@ It is not meant to be something special and is not really optimized. It is just 
 You can freely use it, if needed.
 
 ## How to start
-It uses Node JS and you can start the App with "npm start".
+It uses Node JS and you can start the App with "npm start". But maybe you need to type in "npm upgrade" first and then you can start it.
+
 It then starts the app itself and a Proxyserver. The Proxyserver is needed because of CORS as it received Data from an API.
 
 It was tested on the Firefox Browser
